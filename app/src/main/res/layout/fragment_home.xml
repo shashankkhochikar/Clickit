@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/coordinateLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/homescroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/main_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/hori_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+                </LinearLayout>
+
+                <!--  <android.support.v7.widget.CardView
+                     xmlns:android="http://schemas.android.com/apk/res/android"
+                     xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center"
+                     android:layout_margin="3dp"
+                     android:background="#FFFFFF"
+                     card_view:cardCornerRadius="3dp"
+                     card_view:cardElevation="2dp">
+
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:orientation="vertical">
+
+                         <LinearLayout
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_marginLeft="8dp"
+                             android:orientation="horizontal"
+                             android:padding="3dp">
+
+                             <TextView
+                                 android:id="@+id/editText1"
+                                 android:layout_width="0dp"
+                                 android:layout_height="wrap_content"
+                                 android:layout_weight="8"
+                                 android:text="Computer Accesories"
+                                 android:textColor="#696969"
+                                 android:textSize="15dp" />
+
+                             <TextView
+                                 android:id="@+id/txt_tshirt"
+                                 android:layout_width="0dp"
+                                 android:layout_height="wrap_content"
+                                 android:layout_weight="2"
+                                 android:text="More"
+                                 android:textColor="#696969"
+                                 android:textSize="15dp" />
+                         </LinearLayout>
+
+                         <android.support.v7.widget.RecyclerView
+                             android:id="@+id/recyclerView_Computer_Accesories"
+                             android:layout_width="match_parent"
+                             android:layout_height="195dp"
+                             android:background="@color/white" />
+                     </LinearLayout>
+                 </android.support.v7.widget.CardView>
+
+                  <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                       xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center"
+                       android:layout_margin="3dp"
+                       android:background="#FFFFFF"
+                       card_view:cardCornerRadius="3dp"
+                       card_view:cardElevation="2dp">
+
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical">
+
+                           <LinearLayout
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:layout_marginLeft="5dp"
+                               android:orientation="horizontal"
+                               android:padding="3dp">
+
+                               <TextView
+                                   android:id="@+id/editText2"
+                                   android:layout_width="0dp"
+                                   android:layout_height="wrap_content"
+                                   android:layout_weight="8"
+                                   android:text="Art Gallery"
+                                   android:textColor="#696969"
+                                   android:textSize="15dp" />
+
+                               <TextView
+                                   android:id="@+id/txt_furniture"
+                                   android:layout_width="0dp"
+                                   android:layout_height="wrap_content"
+                                   android:layout_weight="2"
+                                   android:text="More"
+                                   android:textColor="#696969"
+                                   android:textSize="15dp" />
+
+                           </LinearLayout>
+
+                           <android.support.v7.widget.RecyclerView
+                               android:id="@+id/recycle_Art_Gallery"
+                               android:layout_width="match_parent"
+                               android:layout_height="195dp"
+                               android:background="@color/white" />
+                       </LinearLayout>
+                   </android.support.v7.widget.CardView>
+
+                   <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                       xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center"
+                       android:layout_margin="3dp"
+                       android:background="#FFFFFF"
+                       card_view:cardCornerRadius="3dp"
+                       card_view:cardElevation="2dp">
+
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical">
+
+                           <LinearLayout
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:layout_marginLeft="5dp"
+                               android:orientation="horizontal"
+                               android:padding="3dp">
+
+                               <TextView
+                                   android:id="@+id/editText3"
+                                   android:layout_width="0dp"
+                                   android:layout_height="wrap_content"
+                                   android:layout_weight="8"
+                                   android:text="Furniture"
+                                   android:textColor="#696969"
+                                   android:textSize="15dp" />
+
+                               <TextView
+                                   android:id="@+id/txt_mobile"
+                                   android:layout_width="0dp"
+                                   android:layout_height="wrap_content"
+                                   android:layout_weight="2"
+                                   android:text="More"
+                                   android:textColor="#696969"
+                                   android:textSize="15dp" />
+                           </LinearLayout>
+
+                           <android.support.v7.widget.RecyclerView
+                               android:id="@+id/recycle_Furniture"
+                               android:layout_width="match_parent"
+                               android:layout_height="195dp"
+                               android:background="@color/white" />
+                       </LinearLayout>
+                   </android.support.v7.widget.CardView>-->
+
+                <!--<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="3dp"
+                    android:background="#FFFFFF"
+                    card_view:cardCornerRadius="3dp"
+                    card_view:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:orientation="horizontal"
+                            android:padding="3dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="8"
+                                android:text="Home Appliance"
+                                android:textColor="#696969"
+                                android:textSize="15dp" />
+
+                            <TextView
+                                android:id="@+id/txt_homeApplience"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:text="More"
+                                android:textColor="#696969"
+                                android:textSize="15dp" />
+                        </LinearLayout>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recycle_homeAppliances"
+                            android:layout_width="match_parent"
+                            android:layout_height="195dp"
+                            android:layout_marginBottom="60dp"
+                            android:background="@color/white" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>-->
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

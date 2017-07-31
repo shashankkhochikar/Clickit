@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_about_us"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:src="@drawable/clickit_logo"
+            android:paddingBottom="10dp"/>
+
+        <!--<WebView
+            android:id="@+id/mWebView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"/>-->
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/toll_free_call"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_phone"
+                android:text="   Call For Free : 09580855577"
+                android:autoLink="all"
+                android:padding="5dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="   www.clickit.in"
+                android:autoLink="web"
+                android:drawableLeft="@drawable/ic_website"
+                android:textColorLink="#0066CC"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:textColor="#808080"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"/>
+
+            <TextView
+                android:id="@+id/tv_video"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="   See the video"
+                android:drawableLeft="@drawable/ic_play_video"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:textColor="#808080"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="   Namdev Nest, Flat No. 4,1120 E Ward, \n   Rajarampuri, Opp. Kamala Collage,\n   Kolhapur, Maharashtra 416008"
+                android:drawableLeft="@drawable/direction"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:textColor="#808080"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textColor="#808080"
+            android:text="Vision :"
+            android:textStyle="normal|bold"
+            android:id="@+id/textView7"
+            android:textSize="17dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:padding="5dp"
+            android:text="Our aim is to fulfill the customer's expectations to convert their smallest shop to eshop"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textColor="#808080"
+            android:text="Mission :"
+            android:layout_marginLeft="5dp"
+            android:textSize="17dp"
+            android:textStyle="normal|bold"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:padding="5dp"
+            android:text="We design and implement business goals that fulfill your expectations and drive the results you want."/>
+    </LinearLayout>
+
+</LinearLayout>

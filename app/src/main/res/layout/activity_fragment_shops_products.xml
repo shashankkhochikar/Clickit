@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/sc_shop_product"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/single_product_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:background="#efefef"
+                    android:clickable="true"
+                    android:cropToPadding="false"
+                    android:elevation="2dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_img_icon" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/product_title"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.9"
+                            android:padding="10dp"
+                            android:paddingRight="5dp"
+                            android:paddingTop="5dp"
+                            android:text="Title"
+                            android:textColor="#262626"
+                            android:textSize="16dp" />
+
+                        <ImageView
+                            android:id="@+id/iv_product_menu"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="0.12"
+                            android:src="@drawable/ic_menu_dots" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp">
+
+                        <TextView
+                            android:id="@+id/product_price"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/title"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="Price"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/product_views"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/title"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="Views"
+                            android:textSize="13dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/product_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/title"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:text="Description"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:text="More products from this shop"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/tv_NoData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="No Data"
+                    android:visibility="gone" />
+
+                <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="50dp"
+                    android:scrollbars="vertical" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal"
+                android:padding="7dp"
+                android:visibility="gone">
+
+                <!--  <RelativeLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="bottom"
+                      android:background="#FFFFFF"
+                      android:focusable="true">
+          -->
+                <Button
+                    android:id="@+id/addToCart"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.45"
+                    android:background="@color/tersite_blue"
+                    android:text="Cart"
+                    android:textColor="@color/White" />
+
+                <TextView
+                    android:id="@+id/txt_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-10dip"
+                    android:layout_weight="0.02"
+                    android:background="#FFFFFF"
+                    android:contentDescription="badge"
+                    android:gravity="top"
+                    android:text="0"
+                    android:textColor="@color/White"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnSendEnq"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.45"
+                    android:background="@color/tersite_blue"
+                    android:text="Send Enquiry"
+                    android:textColor="@color/White" />
+                <!--  </RelativeLayout>-->
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</android.support.design.widget.CoordinatorLayout>

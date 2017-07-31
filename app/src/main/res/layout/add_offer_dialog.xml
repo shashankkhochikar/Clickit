@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#FFFFFF">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.ActionBar">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:tabTextAppearance="@style/ActionBarTitleStyle" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <TextView
+            android:id="@+id/tvNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_margin="20dp"/>
+
+        <LinearLayout
+            android:id="@+id/laOfferForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Your Offer"
+                android:textColor="#808080"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:layout_width="155dp"
+                android:layout_height="155dp"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/imgOffer"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="#efefef"
+                    android:src="@drawable/ic_img_icon" />
+
+                <ImageView
+                    android:id="@+id/changeOfferImage"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/ic_camera_circle" />
+
+            </FrameLayout>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/etOfferType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:hint="Offer Name"
+                android:inputType="textCapSentences"
+                android:textSize="16dp"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="@color/tersite_blue" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/etOfferDescri"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:hint="Description"
+                android:inputType="textCapSentences"
+                android:textSize="16dp"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="@color/tersite_blue" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/etOfferValidFrom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:editable="false"
+                android:focusable="false"
+                android:hint="Offer Valid From"
+                android:inputType="textCapSentences"
+                android:textSize="16dp"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="@color/tersite_blue" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/etOfferValidTo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:editable="false"
+                android:focusable="false"
+                android:hint="Offer Valid To"
+                android:inputType="textCapSentences"
+                android:textSize="16dp"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="@color/tersite_blue" />
+
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorPrimary"
+                android:text="Add Offer"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

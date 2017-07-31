@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "35853868933",
+    "firebase_url": "https://clickit-a79ca.firebaseio.com",
+    "project_id": "clickit-a79ca",
+    "storage_bucket": "clickit-a79ca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:35853868933:android:d85710935507d964",
+        "android_client_info": {
+          "package_name": "com.clickitproduct"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "35853868933-89qt2tljjqv9k8ui9b1nfaafn6vedbv1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.clickitproduct",
+            "certificate_hash": "270b4e25583b14a7dbd0ade00a03c3bc88131641"
+          }
+        },
+        {
+          "client_id": "35853868933-hecp1daagsrkqimk6jrise8h9ov5jhfv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmoonHUcgNt5CWb5fYhmeixenRxgTxegg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "35853868933-hecp1daagsrkqimk6jrise8h9ov5jhfv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

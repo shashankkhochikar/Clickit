@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.clickitproduct"
+    android:installLocation="preferExternal">
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="package.name.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.support.multidex.MultiDexApplication" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <application
+        android:name=".Application"
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity android:name=".activities.Main_Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".FCM.FirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".FCM.FirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider507265152777589"
+            android:exported="true" />
+
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <activity
+            android:name=".LoginRegistration.UserLogin"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".LoginRegistration.UserRegister"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ShopRegistration.ShopRegisterForm"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity android:name=".activities.MapsActivity" />
+        <activity android:name=".activities.Products_Search_list" />
+        <activity android:name=".activities.Offer_search_list" />
+        <activity android:name=".activities.Services_Search_List" />
+        <activity android:name=".activities.Classifieds_Search_List" />
+        <activity android:name=".activities.ViewCart" />
+        <activity android:name=".activities.Privacy_policy" />
+        <activity android:name=".activities.aboutUs" />
+        <activity android:name=".activities.Contact_us" />
+        <activity android:name=".activities.Notifications" />
+        <activity android:name=".activities.ShopGallery" />
+        <activity android:name=".activities.MyWishList" />
+        <activity android:name=".activities.New_Shop_View_Activity" />
+
+        <activity android:name=".Products.AddProducts" />
+        <activity android:name=".Products.ProductHistory" />
+
+        <activity android:name=".Offer.OfferHistory" />
+        <activity android:name=".Offer.Add_Offers" />
+
+        <activity android:name=".Coupens.AddCoupons" />
+        <activity android:name=".Coupens.GrabNearestCoupons" />
+
+        <activity android:name=".Classifieds.AddClassified" />
+
+        <activity
+            android:name=".Services.ServicesForm"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity android:name=".User_Profile.Profile_new" />
+        <activity android:name=".User_Profile.UserServices" />
+        <activity android:name=".User_Profile.UserClassifieds" />
+        <activity android:name=".User_Profile.UserCouponsHistory" />
+        <activity android:name=".User_Profile.Prof_new" />
+
+        <receiver
+            android:name=".listener.SmsListener"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="016b17023971f5eaa9baa186e2fc508a9deb1387" />
+    </application>
+</manifest>

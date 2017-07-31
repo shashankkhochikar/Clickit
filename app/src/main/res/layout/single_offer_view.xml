@@ -1,0 +1,72 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#efefef">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        card_view:cardElevation="1dp"
+        card_view:cardCornerRadius="0dp"
+        android:layout_margin="3dp">
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtOffername"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:textSize="16dp"
+                    android:text="Shop"
+                    android:layout_margin="6dp"
+                    android:padding="5dp"
+                    android:textColor="#262647"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:id="@+id/offer_Img"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:cropToPadding="false"
+                    android:padding="0dp"
+                    android:src="@drawable/ic_img_icon"
+                    android:background="#efefef"/>
+
+                <TextView
+                    android:id="@+id/txtOfferDesc"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:textSize="12dp"
+                    android:text="Description"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"/>
+
+                <TextView
+                    android:id="@+id/txtValidDate"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:textSize="14dp"
+                    android:text="Valid"
+                    android:padding="5dp"
+                    android:textStyle="bold"
+                    android:textColor="#262647"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"/>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

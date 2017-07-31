@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/mnu_Grab_Coupon"
+        android:title="Grab Coupon"
+        app:actionViewClass="android.widget.TextView"/>
+
+    <item android:id="@+id/mnu_Notificatios"
+        android:title="Notifications"
+        app:actionViewClass="android.widget.TextView"/>
+</menu>

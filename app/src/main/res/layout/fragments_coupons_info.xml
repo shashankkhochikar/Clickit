@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/com_facebook_button_login_silver_background_color_pressed">
+
+    <!--    <android.support.v7.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#FFFFFF"
+            android:elevation="0dp"
+            card_view:cardCornerRadius="0dp"
+            card_view:cardElevation="0dp"
+            android:layout_marginBottom="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:background="@drawable/rectangle_gray_border"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/tvShopName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:padding="5dp"
+                    android:text="Sample"
+                    android:textColor="#02938C"
+                    android:textSize="18dp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    &lt;!&ndash;<com.mikhaellopez.circularimageview.CircularImageView
+                        android:id="@+id/Coupon_Image"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/ic_img_icon"
+                        app:civ_border_width="3dp"
+                        app:civ_shadow="true"
+                        app:civ_shadow_color="#000000"
+                        app:civ_shadow_radius="0" />&ndash;&gt;
+
+                    <ImageView
+                        android:id="@+id/Coupon_Image"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/ic_img_icon"
+                        android:background="#efefef"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvMinPurchase"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="Minimum Purchase of"
+                            android:textSize="17dp" />
+
+                        <TextView
+                            android:id="@+id/tvDiscount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="Discount of"
+                            android:textSize="17dp" />
+
+                        <TextView
+                            android:id="@+id/tvValidNew"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="Valid till"
+                            android:textSize="17dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvItemsRemain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Items Remaining: "
+                    android:textSize="16dp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/laCouponNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvUrCoupNo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:padding="5dp"
+                        android:text="Your Coupon No. : "
+                        android:textColor="#000000"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/tvCoupNo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:text="00000"
+                        android:textColor="@color/Brown"
+                        android:textSize="20dp"
+                        android:textStyle="italic" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/bGrabCouponNow"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/rectangle"
+                    android:padding="8dp"
+                    android:text="Grab Now"
+                    android:textSize="16dp" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>-->
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view_new"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="5dp"
+        android:elevation="0dp"
+        card_view:cardCornerRadius="0dp"
+        card_view:cardElevation="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:padding="5dp"
+                android:shadowColor="@color/WhiteSmoke"
+                android:text="COUPON"
+                android:textColor="@color/Red"
+                android:textSize="19dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvShopName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Shop Name"
+                android:textColor="#262647"
+                android:textSize="20dp"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/Coupon_Image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:background="#efefef"
+                android:clickable="true"
+                android:cropToPadding="false"
+                android:elevation="2dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_img_icon" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/tvMinPurchase"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:padding="5dp"
+                    android:text="Minimum Purchase of"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/tvDiscount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:gravity="left"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="10dp"
+                    android:shadowColor="@color/WhiteSmoke"
+                    android:text="Discount"
+                    android:textColor="@color/Red"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvUrCoupNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textSize="9dp" />
+
+                <Button
+                    android:id="@+id/bGrabCouponNow"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/tersite_blue"
+                    android:paddingLeft="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingRight="50dp"
+                    android:text="Get It NOW"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16dp" />
+
+                <!-- <TextView
+                     android:id="@+id/bGrabCouponNow"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:gravity="center"
+                     android:text="Get It NOW"
+                     android:textColor="@color/black"
+                     android:textSize="18dp"
+                     android:textStyle="bold" />-->
+
+                <TextView
+                    android:id="@+id/tvCoupNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textColor="@color/Brown"
+                    android:textSize="20dp"
+                    android:textStyle="italic"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvValidNew"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:padding="0dp"
+                        android:text="Valid till"
+                        android:textSize="10dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

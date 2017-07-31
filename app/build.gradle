@@ -1,0 +1,75 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.1"
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        applicationId "com.clickitproduct"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 51
+        versionName "2.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+
+        renderscriptTargetApi 23
+        renderscriptSupportModeEnabled true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+    }
+}
+repositories {
+    mavenCentral()
+    maven { url "https://jitpack.io" }
+    maven { url 'https://maven.fabric.io/public' }
+}
+dependencies
+{
+    compile 'com.rengwuxian.materialedittext:library:2.1.4'
+    compile 'com.facebook.android:facebook-android-sdk:4.0.0'
+    compile 'com.github.clans:fab:1.6.4'
+    compile 'com.android.support:multidex:1.0.1'
+
+    testCompile 'junit:junit:4.12'
+    compile 'com.google.android.gms:play-services-auth:10.2.0'
+    compile 'com.google.android.gms:play-services:10.2.0'
+    compile 'com.google.firebase:firebase-messaging:10.2.0'
+
+    compile 'com.koushikdutta.ion:ion:2.+'
+    compile 'com.android.support:cardview-v7:25.2.0'
+    compile 'com.android.support:design:25.2.0'
+    compile 'com.android.support:support-v4:25.2.0'
+    compile 'com.android.support:appcompat-v7:25.2.0'
+
+    /* Make sure you are import the latest SDK version */
+    compile 'ly.img.android:photo-editor-sdk:4.0.2'
+    compile('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
+        transitive = true;
+    }
+}
+apply plugin: 'com.google.gms.google-services'

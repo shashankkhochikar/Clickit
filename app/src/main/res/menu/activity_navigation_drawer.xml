@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/tProfile"
+            android:icon="@drawable/ic_profile"
+            android:title="Profile" />
+        <item
+            android:id="@+id/tRegShop"
+            android:icon="@drawable/ic_shop_logo_black"
+            android:title="Register Shop" />
+        <item
+            android:id="@+id/tRegService"
+            android:icon="@drawable/ic_service_logo_black"
+            android:title="Register Service" />
+        <item
+            android:id="@+id/tRegClassified"
+            android:icon="@drawable/ic_classified_black"
+            android:title="Register Classified" />
+        <item
+            android:id="@+id/tMyWishList"
+            android:icon="@drawable/ic_wish_list"
+            android:title="Wishlist" />
+        <item
+            android:id="@+id/tShare"
+            android:icon="@drawable/ic_share"
+            android:title="Invite Friends" />
+        <item
+            android:id="@+id/tPolicy"
+            android:icon="@drawable/ic_policy"
+            android:title="Privacy Policy" />
+        <item
+            android:id="@+id/tContact"
+            android:icon="@drawable/ic_contactus"
+            android:title="Contact Us" />
+        <item
+            android:id="@+id/tAbout"
+            android:icon="@drawable/ic_about_us"
+            android:title="About Us" />
+    </group>
+</menu>
