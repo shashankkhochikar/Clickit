@@ -1,12 +1,12 @@
 package com.clickitproduct.activities;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import com.clickitproduct.R;
 
-public class Privacy_policy extends AppCompatActivity
+public class PrivacyPolicy extends AppCompatActivity
 {
     TextView txt_policy;
     @Override

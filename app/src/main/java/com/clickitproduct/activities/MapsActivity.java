@@ -330,8 +330,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         ShopRegisterForm.lon = lon + "";
         ServicesForm.lat = lat+"";
         ServicesForm.lon = lon+"";
-        AddClassified.lat = lat+"";
-        AddClassified.lon = lon+"";
+        ClassifiedAdd.lat = lat+"";
+        ClassifiedAdd.lon = lon+"";
     }
 
     @Override
@@ -342,8 +342,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             ShopRegisterForm.lon = lon + "";
             ServicesForm.lat = lat+"";
             ServicesForm.lon = lon+"";
-            AddClassified.lat = lat+"";
-            AddClassified.lon = lon+"";
+            ClassifiedAdd.lat = lat+"";
+            ClassifiedAdd.lon = lon+"";
         }
     }
 }

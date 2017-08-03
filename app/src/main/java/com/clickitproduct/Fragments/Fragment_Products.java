@@ -30,7 +30,7 @@ import android.widget.TextView;
 
 import com.clickitproduct.R;
 import com.clickitproduct.activities.Main_Activity;
-import com.clickitproduct.activities.New_Shop_View_Activity;
+import com.clickitproduct.activities.ShopViewActivityNew;
 import com.clickitproduct.commonutil.common_variable;
 import com.github.clans.fab.FloatingActionButton;
 import com.google.gson.JsonArray;
@@ -399,7 +399,7 @@ public class Fragment_Products extends Fragment
 
                     common_variable.jShopProductObj = jProductsObj;
 
-                    Intent i = new Intent(getContext(), New_Shop_View_Activity.class);
+                    Intent i = new Intent(getContext(), ShopViewActivityNew.class);
                     i.putExtra("Shop_Id", jobj.get("shop_id").toString().replaceAll("^\"|\"$",""));
                     i.putExtra("focusParticularTab", 1);
                     startActivity(i);

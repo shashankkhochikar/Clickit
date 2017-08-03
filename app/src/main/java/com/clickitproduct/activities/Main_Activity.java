@@ -551,7 +551,7 @@ public class Main_Activity extends AppCompatActivity implements NavigationView.O
                 return true;
 
             case R.id.mnu_Grab_Coupon:
-                startActivity(new Intent(Main_Activity.this, GrabNearestCoupons.class));
+                startActivity(new Intent(Main_Activity.this, CouponsGrabNearest.class));
                 return true;
 
             case R.id.mnu_Notificatios:
@@ -609,15 +609,15 @@ public class Main_Activity extends AppCompatActivity implements NavigationView.O
                         {
                             switch (search_category)
                             {
-                                case 0: startActivity(new Intent(Main_Activity.this, Offer_search_list.class));
+                                case 0: startActivity(new Intent(Main_Activity.this, OfferSearchList.class));
                                     break;
-                                case 1: startActivity(new Intent(Main_Activity.this, Products_Search_list.class));
+                                case 1: startActivity(new Intent(Main_Activity.this, ProductSearchList.class));
                                     break;
 //                                case 2: startActivity(new Intent(Main_Activity.this, Shops_Search_List .class));
 //                                    break;
-                                case 3: startActivity(new Intent(Main_Activity.this, Services_Search_List.class));
+                                case 3: startActivity(new Intent(Main_Activity.this, ServicesSearchList.class));
                                     break;
-                                case 4: startActivity(new Intent(Main_Activity.this, Classifieds_Search_List.class));
+                                case 4: startActivity(new Intent(Main_Activity.this, ClassifiedSearchList.class));
                                     break;
                                 default: Toast.makeText(getApplicationContext(),"",Toast.LENGTH_LONG).show();
                                     break;
@@ -682,15 +682,15 @@ public class Main_Activity extends AppCompatActivity implements NavigationView.O
             sendIntent.setType("text/plain");
             startActivity(Intent.createChooser(sendIntent, "Choose One"));
         }else if (id == R.id.tPolicy){
-            startActivity(new Intent(this, Privacy_policy.class));
+            startActivity(new Intent(this, PrivacyPolicy.class));
         }else if (id == R.id.tContact){
             startActivity(new Intent(this, Contact_us.class));
         }else if (id == R.id.tAbout) {
-            startActivity(new Intent(this, AboutUsActivity.class));
+            startActivity(new Intent(this, AboutUs.class));
         }else if(id == R.id.tRegService){
             startActivity(new Intent(Main_Activity.this, ServicesForm.class));
         }else if(id == R.id.tRegClassified){
-            startActivity(new Intent(Main_Activity.this, AddClassified.class));
+            startActivity(new Intent(Main_Activity.this, ClassifiedAdd.class));
         }else if(id == R.id.tMyWishList){
             startActivity(new Intent(Main_Activity.this, MyWishList.class));
         }

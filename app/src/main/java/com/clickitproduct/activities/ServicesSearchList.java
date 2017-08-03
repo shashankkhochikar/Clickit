@@ -8,10 +8,10 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
-import com.clickitproduct.Fragments.Fragment_Classifieds;
+import com.clickitproduct.Fragments.Fragment_Services;
 import com.clickitproduct.R;
 
-public class Classifieds_Search_List extends AppCompatActivity
+public class ServicesSearchList extends AppCompatActivity
 {
     private ViewPager mViewPager;
     private SectionsPagerAdapter mSectionsPagerAdapter;
@@ -25,7 +25,6 @@ public class Classifieds_Search_List extends AppCompatActivity
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
-
     }
 
     public class SectionsPagerAdapter extends FragmentPagerAdapter
@@ -37,7 +36,7 @@ public class Classifieds_Search_List extends AppCompatActivity
         public Fragment getItem(int position)
         {
             if (position == 0) {
-                return Fragment_Classifieds.newInstance(position);
+                return Fragment_Services.newInstance(position);
             }
             return null;
         }

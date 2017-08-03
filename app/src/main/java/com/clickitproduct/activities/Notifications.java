@@ -10,7 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-import com.clickitproduct.Fragments.Fragment_user_notifications;
+import com.clickitproduct.Fragments.Fragment_User_Notifications;
 import com.clickitproduct.R;
 
 public class Notifications extends AppCompatActivity{
@@ -46,7 +46,7 @@ public class Notifications extends AppCompatActivity{
         @Override
         public Fragment getItem(int position) {
             if (position == 0) {
-                return Fragment_user_notifications.newInstance(position);
+                return Fragment_User_Notifications.newInstance(position);
             }
             return null;
         }

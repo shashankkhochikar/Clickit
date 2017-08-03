@@ -26,7 +26,7 @@ import com.google.gson.JsonObject;
 import com.koushikdutta.async.future.FutureCallback;
 import com.koushikdutta.ion.Ion;
 
-public class New_Shop_View_Activity extends AppCompatActivity
+public class ShopViewActivityNew extends AppCompatActivity
 {
     int focusParticularTab;
     Toolbar toolbar;
@@ -87,7 +87,7 @@ public class New_Shop_View_Activity extends AppCompatActivity
 
                 Log.e("shop_info 1111",""+jsonParam.toString());
 
-                Ion.with(New_Shop_View_Activity.this)
+                Ion.with(ShopViewActivityNew.this)
                         .load(common_variable.main_web_url + "/product/product_check")
                         .setJsonObjectBody(jsonParam)
                         .asJsonObject()
@@ -130,7 +130,7 @@ public class New_Shop_View_Activity extends AppCompatActivity
             {
                 if(Main_Activity.current_Lattitude == 0.0 && Main_Activity.current_Longitude == 0.0)
                 {
-                    Toast.makeText(New_Shop_View_Activity.this,"Not Getting Your Proper Location",Toast.LENGTH_LONG).show();
+                    Toast.makeText(ShopViewActivityNew.this,"Not Getting Your Proper Location",Toast.LENGTH_LONG).show();
                     return;
                 }else{
                     Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://maps.google.com/maps?saddr=" + Main_Activity.current_Lattitude + "," + Main_Activity.current_Longitude + "&daddr=" + shop_lati + "," + shop_longi + ""));
@@ -151,7 +151,7 @@ public class New_Shop_View_Activity extends AppCompatActivity
                     mIntent.putExtra("chat",true);
                     startActivity(mIntent);
                 }catch (Exception e)
-                {Toast.makeText(New_Shop_View_Activity.this,"No Whatsapp Found",Toast.LENGTH_LONG).show();}
+                {Toast.makeText(ShopViewActivityNew.this,"No Whatsapp Found",Toast.LENGTH_LONG).show();}
             }
         });
     }
@@ -163,7 +163,7 @@ public class New_Shop_View_Activity extends AppCompatActivity
             jsonParam.addProperty("shop_id", common_variable.Shop_ID);
             jsonParam.addProperty("platform", "1");
 
-            Ion.with(New_Shop_View_Activity.this)
+            Ion.with(ShopViewActivityNew.this)
                 .load(common_variable.main_web_url+"/shop/shop_info")
                 .setJsonObjectBody(jsonParam)
                 .asJsonObject()

@@ -48,7 +48,7 @@ import java.io.IOException;
 import java.util.Calendar;
 import java.util.Date;
 
-public class AddCoupons extends AppCompatActivity
+public class CouponsAdd extends AppCompatActivity
 {
     EditText etMinPurchase, etDiscount, etQuantity, etValidity, etYourShop;
     ImageView ivDate, CouponImage;
@@ -180,7 +180,7 @@ public class AddCoupons extends AppCompatActivity
                 }
                 else
                 {
-                    final ProgressDialog dialog = new ProgressDialog(AddCoupons.this);
+                    final ProgressDialog dialog = new ProgressDialog(CouponsAdd.this);
                     dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
                     dialog.setMessage("Loading...");
                     dialog.setCancelable(false);
@@ -209,7 +209,7 @@ public class AddCoupons extends AppCompatActivity
                         public void onCompleted(Exception e, JsonObject result)
                         {
                             dialog.dismiss();
-                            Toast.makeText(AddCoupons.this, "Coupons added successfully", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(CouponsAdd.this, "Coupons added successfully", Toast.LENGTH_SHORT).show();
                             finish();
                         }
                     });
@@ -247,10 +247,10 @@ public class AddCoupons extends AppCompatActivity
 
     public void cameraGalleryDialog()
     {
-        LayoutInflater li = LayoutInflater.from(AddCoupons.this);
+        LayoutInflater li = LayoutInflater.from(CouponsAdd.this);
         final View prompt = li.inflate(R.layout.choose_photo, null);
 
-        final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(new ContextThemeWrapper(AddCoupons.this, R.style.MyAlertTheme));
+        final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(new ContextThemeWrapper(CouponsAdd.this, R.style.MyAlertTheme));
         alertDialogBuilder.setView(prompt);
         alertDialogBuilder.setCancelable(true);
         final AlertDialog dialog = alertDialogBuilder.show();
@@ -428,7 +428,7 @@ public class AddCoupons extends AppCompatActivity
 
     public class setImage extends AsyncTask<Bitmap, Void, Void>
     {
-        private ProgressDialog Dialog = new ProgressDialog(AddCoupons.this);
+        private ProgressDialog Dialog = new ProgressDialog(CouponsAdd.this);
         Bitmap bit = null;
         protected void onPreExecute()
         {

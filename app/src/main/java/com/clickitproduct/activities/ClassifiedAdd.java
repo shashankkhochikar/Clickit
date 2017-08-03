@@ -39,7 +39,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.FileDescriptor;
 import java.io.IOException;
 
-public class AddClassified extends AppCompatActivity
+public class ClassifiedAdd extends AppCompatActivity
 {
     public static SharedPreferences sharedpreferences;
     public static final String MyPREFERENCES = "MyPrefs";
@@ -88,7 +88,7 @@ public class AddClassified extends AppCompatActivity
         etTypes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final AlertDialog.Builder builder = new AlertDialog.Builder(AddClassified.this);
+                final AlertDialog.Builder builder = new AlertDialog.Builder(ClassifiedAdd.this);
                 builder.setItems(common_variable.Classified_Types, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -103,8 +103,8 @@ public class AddClassified extends AppCompatActivity
         etCategory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(AddClassified.this);
-                LayoutInflater inflater = AddClassified.this.getLayoutInflater();
+                AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(ClassifiedAdd.this);
+                LayoutInflater inflater = ClassifiedAdd.this.getLayoutInflater();
                 View dialogView = inflater.inflate(R.layout.list_view, null);
                 dialogBuilder.setView(dialogView);
 
@@ -140,7 +140,7 @@ public class AddClassified extends AppCompatActivity
 
                 dialog_ListView = (ListView) alertDialog.findViewById(R.id.listView);
                 dialog_ListView.setChoiceMode(dialog_ListView.CHOICE_MODE_MULTIPLE); // used for click check box
-                dialog_ListView.setAdapter(new ArrayAdapter<String>(AddClassified.this, android.R.layout.simple_list_item_checked, common_variable.Classified_Categories));
+                dialog_ListView.setAdapter(new ArrayAdapter<String>(ClassifiedAdd.this, android.R.layout.simple_list_item_checked, common_variable.Classified_Categories));
             }
         });
 
@@ -174,7 +174,7 @@ public class AddClassified extends AppCompatActivity
         btnMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(AddClassified.this, MapsActivity.class);
+                Intent i = new Intent(ClassifiedAdd.this, MapsActivity.class);
                 startActivity(i);
             }
         });
@@ -183,14 +183,14 @@ public class AddClassified extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 try{
-                    final ProgressDialog dialog = new ProgressDialog(AddClassified.this);
+                    final ProgressDialog dialog = new ProgressDialog(ClassifiedAdd.this);
                     dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
                     dialog.setMessage("Loading...");
                     dialog.setCancelable(false);
                     dialog.show();
 
                     JsonObject jsonParam = new JsonObject();
-                    Ion.with(AddClassified.this)
+                    Ion.with(ClassifiedAdd.this)
                     .load(common_variable.main_web_url+"/admin/getcities")
                     .progressDialog(dialog)
                     .setJsonObjectBody(jsonParam)
@@ -209,7 +209,7 @@ public class AddClassified extends AppCompatActivity
                                     cities[c] = objCat.get("city_name").toString().replaceAll("^\"|\"$", "");
                                 }
 
-                                final AlertDialog.Builder builder = new AlertDialog.Builder(AddClassified.this);
+                                final AlertDialog.Builder builder = new AlertDialog.Builder(ClassifiedAdd.this);
                                 builder.setItems(cities, new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -307,7 +307,7 @@ public class AddClassified extends AppCompatActivity
                         jCategory.put(cats[j]);
                     }
 
-                    final ProgressDialog dialog = new ProgressDialog(AddClassified.this);
+                    final ProgressDialog dialog = new ProgressDialog(ClassifiedAdd.this);
                     dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
                     dialog.setMessage("Loading...");
                     dialog.show();
@@ -417,12 +417,12 @@ public class AddClassified extends AppCompatActivity
             lon = loc[1];
 
             try{
-                /*Glide.with(AddClassified.this)
+                /*Glide.with(ClassifiedAdd.this)
                 .load(common_variable.main_web_url + "/uploads/classifieds/"+jClassifiedImages.get("classified_img1").toString().replaceAll("^\"|\"$", ""))
                 .placeholder(R.drawable.upload)
                 .into(ivAd1);*/
 
-                Ion.with(AddClassified.this)
+                Ion.with(ClassifiedAdd.this)
                     .load(common_variable.main_web_url + "/uploads/classifieds/"+jClassifiedImages.get("classified_img1").toString().replaceAll("^\"|\"$", ""))
                     .withBitmap()
                     .placeholder(R.raw.loading)
@@ -432,12 +432,12 @@ public class AddClassified extends AppCompatActivity
             catch (Exception e1) {}
 
             try{
-                /*Glide.with(AddClassified.this)
+                /*Glide.with(ClassifiedAdd.this)
                 .load(common_variable.main_web_url + "/uploads/classifieds/"+jClassifiedImages.get("classified_img2").toString().replaceAll("^\"|\"$", ""))
                 .placeholder(R.drawable.upload)
                 .into(ivAd2);*/
 
-                Ion.with(AddClassified.this)
+                Ion.with(ClassifiedAdd.this)
                     .load(common_variable.main_web_url + "/uploads/classifieds/"+jClassifiedImages.get("classified_img2").toString().replaceAll("^\"|\"$", ""))
                     .withBitmap()
                     .placeholder(R.raw.loading)
@@ -447,12 +447,12 @@ public class AddClassified extends AppCompatActivity
             catch (Exception e1){}
 
             try{
-                /*Glide.with(AddClassified.this)
+                /*Glide.with(ClassifiedAdd.this)
                 .load(common_variable.main_web_url + "/uploads/classifieds/"+jClassifiedImages.get("classified_img3").toString().replaceAll("^\"|\"$", ""))
                 .placeholder(R.drawable.upload)
                 .into(ivAd3);*/
 
-                Ion.with(AddClassified.this)
+                Ion.with(ClassifiedAdd.this)
                     .load(common_variable.main_web_url + "/uploads/classifieds/"+jClassifiedImages.get("classified_img3").toString().replaceAll("^\"|\"$", ""))
                     .withBitmap()
                     .placeholder(R.raw.loading)
@@ -584,7 +584,6 @@ public class AddClassified extends AppCompatActivity
                     try {
                         bmp1 = getBitmapFromUri4Gallary(selectedImage1);
                     } catch (IOException e) {
-                        // TODO Auto-generated catch block
                         e.printStackTrace();
                     } catch (OutOfMemoryError exp) {
                         exp.printStackTrace();
@@ -618,7 +617,6 @@ public class AddClassified extends AppCompatActivity
                     try {
                         bmp2 = getBitmapFromUri4Gallary(selectedImage2);
                     } catch (IOException e) {
-                        // TODO Auto-generated catch block
                         e.printStackTrace();
                     } catch (OutOfMemoryError exp) {
                         exp.printStackTrace();
@@ -652,8 +650,7 @@ public class AddClassified extends AppCompatActivity
                     try {
                         bmp3 = getBitmapFromUri4Gallary(selectedImage3);
                     } catch (IOException e) {
-                        // TODO Auto-generated catch block
-                        e.printStackTrace();
+                       e.printStackTrace();
                     } catch (OutOfMemoryError exp) {
                         exp.printStackTrace();
                     }

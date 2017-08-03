@@ -19,7 +19,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.clickitproduct.R;
-import com.clickitproduct.activities.New_Shop_View_Activity;
+import com.clickitproduct.activities.ShopViewActivityNew;
 import com.clickitproduct.commonutil.common_variable;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -28,7 +28,7 @@ import com.koushikdutta.ion.Ion;
 
 import static android.content.Context.MODE_PRIVATE;
 
-public class Fragment_user_notifications extends Fragment
+public class Fragment_User_Notifications extends Fragment
 {
     View rootview=null;
     private RecyclerView recyclerView;
@@ -37,10 +37,10 @@ public class Fragment_user_notifications extends Fragment
     public static final String MyPREFERENCES = "MyPrefs";
     TextView tv_NoData;
 
-    public static Fragment_user_notifications newInstance(int instance)
+    public static Fragment_User_Notifications newInstance(int instance)
     {
         Bundle args = new Bundle();
-        Fragment_user_notifications f1 = new Fragment_user_notifications();
+        Fragment_User_Notifications f1 = new Fragment_User_Notifications();
         f1.setArguments(args);
         return f1;
     }
@@ -177,7 +177,7 @@ public class Fragment_user_notifications extends Fragment
                 public void onClick(View v) {
 
                     jobj = (JsonObject) pList.get(position);
-                    Intent i = new Intent(getContext(), New_Shop_View_Activity.class);
+                    Intent i = new Intent(getContext(), ShopViewActivityNew.class);
                     i.putExtra("Shop_Id", jobj.get("shop_id").toString().replaceAll("^\"|\"$", ""));
                     if(jobj.get("flag").toString().replaceAll("^\"|\"$", "").equals("1")) {
                         i.putExtra("focusParticularTab", 2);

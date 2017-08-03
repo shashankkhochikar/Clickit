@@ -23,7 +23,7 @@ import android.widget.TextView;
 
 import com.clickitproduct.R;
 import com.clickitproduct.activities.Main_Activity;
-import com.clickitproduct.activities.New_Shop_View_Activity;
+import com.clickitproduct.activities.ShopViewActivityNew;
 import com.clickitproduct.commonutil.common_variable;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -404,7 +404,7 @@ public class Fragment_Shops_Products extends Fragment
                                             jProObj.get("product_name").toString().replaceAll("^\"|\"$", "");
 
                                     Intent email = new Intent(Intent.ACTION_SEND);
-                                    email.putExtra(Intent.EXTRA_EMAIL, new String[]{New_Shop_View_Activity.shop_email});
+                                    email.putExtra(Intent.EXTRA_EMAIL, new String[]{ShopViewActivityNew.shop_email});
                                     email.putExtra(Intent.EXTRA_SUBJECT, "Products enquiry");
                                     email.putExtra(Intent.EXTRA_TEXT, message);
                                     email.setType("message/rfc822");

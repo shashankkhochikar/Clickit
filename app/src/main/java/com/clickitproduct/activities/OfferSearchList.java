@@ -1,16 +1,16 @@
 package com.clickitproduct.activities;
 
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
 import com.clickitproduct.Fragments.Fragment_Offers;
 import com.clickitproduct.R;
 
-public class Offer_search_list extends AppCompatActivity
+public class OfferSearchList extends AppCompatActivity
 {
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;

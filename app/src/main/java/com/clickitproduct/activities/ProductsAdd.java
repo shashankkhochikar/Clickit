@@ -55,7 +55,7 @@ import ly.img.android.sdk.models.state.manager.SettingsList;
 import ly.img.android.ui.activities.CameraPreviewBuilder;
 import ly.img.android.ui.activities.ImgLyIntent;
 
-public class AddProducts extends AppCompatActivity
+public class ProductsAdd extends AppCompatActivity
 {
     private static final int PRODUCT = 1;
     private static final int IMAGE_CAPTURE = 2;
@@ -99,7 +99,7 @@ public class AddProducts extends AppCompatActivity
             jsonParam.addProperty("shop_id", common_variable.User_Shop_ID);
             jsonParam.addProperty("platform", "1");
 
-            Ion.with(AddProducts.this)
+            Ion.with(ProductsAdd.this)
             .load(common_variable.main_web_url+"/product/product_check")
             .setJsonObjectBody(jsonParam)
             .asJsonObject()
@@ -136,7 +136,7 @@ public class AddProducts extends AppCompatActivity
             }
         });
 
-        prodAdapter = new CustomListAdapterProducts(AddProducts.this, prodlist);
+        prodAdapter = new CustomListAdapterProducts(ProductsAdd.this, prodlist);
         lstProd.setAdapter(prodAdapter);
         btnSubmit.setOnClickListener(new View.OnClickListener()
         {
@@ -145,7 +145,7 @@ public class AddProducts extends AppCompatActivity
             {
                 if(prodlist.size() > 0)
                 {
-                    final ProgressDialog dialog = new ProgressDialog(AddProducts.this);
+                    final ProgressDialog dialog = new ProgressDialog(ProductsAdd.this);
                     dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
                     dialog.setMessage("Loading...");
                     dialog.setCancelable(false);
@@ -191,23 +191,23 @@ public class AddProducts extends AppCompatActivity
                             {
                                 lstProd.setAdapter(null);
                                 prodAdapter.notifyDataSetChanged();
-                                Toast.makeText(AddProducts.this, "Product added successfully", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(ProductsAdd.this, "Product added successfully", Toast.LENGTH_SHORT).show();
                                 common_variable.Refresh_Product = 1;
                             }
                             catch (Exception e3)
-                            {Toast.makeText(AddProducts.this, "something error", Toast.LENGTH_SHORT).show();}
+                            {Toast.makeText(ProductsAdd.this, "something error", Toast.LENGTH_SHORT).show();}
                         }
                     });
                 }
                 else
-                { Toast.makeText(AddProducts.this, "Add atleast one product", Toast.LENGTH_SHORT).show(); }
+                { Toast.makeText(ProductsAdd.this, "Add atleast one product", Toast.LENGTH_SHORT).show(); }
             }
         });
     }
 
     public void openProductDialog()
     {
-        final Dialog AddDialog=new Dialog(AddProducts.this,android.R.style.Theme_Holo_Light_NoActionBar_Fullscreen);
+        final Dialog AddDialog=new Dialog(ProductsAdd.this,android.R.style.Theme_Holo_Light_NoActionBar_Fullscreen);
         AddDialog.setContentView(R.layout.add_product_dialog);
         Log.e("User_Shop_Category", common_variable.User_Shop_Category);
 
@@ -236,9 +236,9 @@ public class AddProducts extends AppCompatActivity
                         .setExportPrefix("result_")
                         .setSavePolicy(EditorSaveSettings.SavePolicy.KEEP_SOURCE_AND_CREATE_ALWAYS_OUTPUT);
 
-                new CameraPreviewBuilder(AddProducts.this)
+                new CameraPreviewBuilder(ProductsAdd.this)
                         .setSettingsList(settingsList)
-                        .startActivityForResult(AddProducts.this, CAMERA_PREVIEW_RESULT);
+                        .startActivityForResult(ProductsAdd.this, CAMERA_PREVIEW_RESULT);
             }
         });
 
@@ -247,7 +247,7 @@ public class AddProducts extends AppCompatActivity
             public void onClick(View view)
             {
 
-                final ProgressDialog Pdialog = new ProgressDialog(AddProducts.this);
+                final ProgressDialog Pdialog = new ProgressDialog(ProductsAdd.this);
                 Pdialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
                 Pdialog.setMessage("Loading...");
                 Pdialog.setCancelable(false);
@@ -280,7 +280,7 @@ public class AddProducts extends AppCompatActivity
                                 product_Categories[i] = jCat.get("sub_categories").toString().replaceAll("^\"|\"$", "");
                             }
 
-                            final AlertDialog.Builder builder = new AlertDialog.Builder(AddProducts.this);
+                            final AlertDialog.Builder builder = new AlertDialog.Builder(ProductsAdd.this);
                             builder.setItems(product_Categories, new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
@@ -352,9 +352,9 @@ public class AddProducts extends AppCompatActivity
     }
     public void cameraGalleryDialog()
     {
-        LayoutInflater li = LayoutInflater.from(AddProducts.this);
+        LayoutInflater li = LayoutInflater.from(ProductsAdd.this);
         final View prompt = li.inflate(R.layout.choose_photo, null);
-        final android.app.AlertDialog.Builder alertDialogBuilder = new android.app.AlertDialog.Builder(new ContextThemeWrapper(AddProducts.this, R.style.MyAlertTheme));
+        final android.app.AlertDialog.Builder alertDialogBuilder = new android.app.AlertDialog.Builder(new ContextThemeWrapper(ProductsAdd.this, R.style.MyAlertTheme));
         alertDialogBuilder.setView(prompt);
         alertDialogBuilder.setCancelable(true);
         final android.app.AlertDialog dialog = alertDialogBuilder.show();
@@ -530,7 +530,6 @@ public class AddProducts extends AppCompatActivity
                         performCrop(filePath1);
                         nm = "Product." + img_shop1[img_shop1.length - 1];
                     } catch (Exception e) {
-                        // TODO Auto-generated catch block
                         e.printStackTrace();
                         try {
                             bmp1 = getBitmapFromUri4Gallary(selectedImage1);
@@ -590,7 +589,7 @@ public class AddProducts extends AppCompatActivity
     }
 
     public class setImage extends AsyncTask<Bitmap, Void, Void> {
-        private ProgressDialog Dialog = new ProgressDialog(AddProducts.this);
+        private ProgressDialog Dialog = new ProgressDialog(ProductsAdd.this);
         Bitmap bit = null;
 
         protected void onPreExecute() {
@@ -639,7 +638,7 @@ public class AddProducts extends AppCompatActivity
         }
         else if(item.getItemId() == R.id.history)
         {
-            startActivity(new Intent(AddProducts.this, ProductHistory.class));
+            startActivity(new Intent(ProductsAdd.this, ProductHistory.class));
             return true;
         }
         return super.onOptionsItemSelected(item);

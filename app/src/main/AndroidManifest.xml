@@ -92,29 +92,29 @@
             android:value="@string/google_maps_key" />
 
         <activity android:name=".activities.MapsActivity" />
-        <activity android:name=".activities.Products_Search_list" />
-        <activity android:name=".activities.Offer_search_list" />
-        <activity android:name=".activities.Services_Search_List" />
-        <activity android:name=".activities.Classifieds_Search_List" />
+        <activity android:name=".activities.ProductSearchList" />
+        <activity android:name=".activities.OfferSearchList" />
+        <activity android:name=".activities.ServicesSearchList" />
+        <activity android:name=".activities.ClassifiedSearchList" />
         <activity android:name=".activities.ViewCart" />
-        <activity android:name=".activities.Privacy_policy" />
-        <activity android:name=".activities.AboutUsActivity" />
+        <activity android:name=".activities.PrivacyPolicy" />
+        <activity android:name=".activities.AboutUs" />
         <activity android:name=".activities.Contact_us" />
         <activity android:name=".activities.Notifications" />
         <activity android:name=".activities.ShopGallery" />
         <activity android:name=".activities.MyWishList" />
-        <activity android:name=".activities.New_Shop_View_Activity" />
+        <activity android:name=".activities.ShopViewActivityNew" />
 
-        <activity android:name=".activities.AddProducts" />
+        <activity android:name=".activities.ProductsAdd" />
         <activity android:name=".activities.ProductHistory" />
 
         <activity android:name=".activities.OfferHistory" />
-        <activity android:name=".activities.Add_Offers" />
+        <activity android:name=".activities.OfferAdd" />
 
-        <activity android:name=".activities.AddCoupons" />
-        <activity android:name=".activities.GrabNearestCoupons" />
+        <activity android:name=".activities.CouponsAdd" />
+        <activity android:name=".activities.CouponsGrabNearest" />
 
-        <activity android:name=".activities.AddClassified" />
+        <activity android:name=".activities.ClassifiedAdd" />
 
         <activity
             android:name=".activities.ServicesForm"

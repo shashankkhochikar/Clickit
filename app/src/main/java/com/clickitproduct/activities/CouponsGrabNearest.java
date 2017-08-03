@@ -25,7 +25,7 @@ import com.koushikdutta.ion.Ion;
 import java.text.NumberFormat;
 import java.util.Locale;
 
-public class GrabNearestCoupons extends AppCompatActivity
+public class CouponsGrabNearest extends AppCompatActivity
 {
     RecyclerView coupons_recycler_view;
     RecyclerViewAdapter mAdapter;
@@ -44,7 +44,7 @@ public class GrabNearestCoupons extends AppCompatActivity
         jsonParam.addProperty("searchkeyword","");
         jsonParam.addProperty("platform", "1");
 
-        Ion.with(GrabNearestCoupons.this)
+        Ion.with(CouponsGrabNearest.this)
         .load(common_variable.main_web_url+"/coupon/coupon_search")
         .setJsonObjectBody(jsonParam)
         .asJsonObject()
@@ -113,12 +113,12 @@ public class GrabNearestCoupons extends AppCompatActivity
             holder.tvShopName.setText(jobj.get("shop_name").toString().replaceAll("^\"|\"$", ""));
 
             try {
-                /*Glide.with(GrabNearestCoupons.this)
+                /*Glide.with(CouponsGrabNearest.this)
                 .load(common_variable.main_web_url + "/uploads/coupon/" + jCouponsObj.get("coupon_img").toString().replaceAll("^\"|\"$", ""))
                 .placeholder(R.drawable.ic_img_icon)
                 .into(holder.Coupon_Image);*/
 
-                Ion.with(GrabNearestCoupons.this)
+                Ion.with(CouponsGrabNearest.this)
                         .load(common_variable.main_web_url + "/uploads/coupon/" + jCouponsObj.get("coupon_img").toString().replaceAll("^\"|\"$", ""))
                         .withBitmap()
                         .placeholder(R.raw.loading)
@@ -139,7 +139,7 @@ public class GrabNearestCoupons extends AppCompatActivity
             holder.bGrabCouponNow.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent i = new Intent(GrabNearestCoupons.this, New_Shop_View_Activity.class);
+                    Intent i = new Intent(CouponsGrabNearest.this, ShopViewActivityNew.class);
                     i.putExtra("Shop_Id", jobj.get("shop_id").toString().replaceAll("^\"|\"$",""));
                     i.putExtra("focusParticularTab", 4);
                     startActivity(i);

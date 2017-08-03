@@ -8,13 +8,13 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
-import com.clickitproduct.Fragments.Fragment_Services;
+import com.clickitproduct.Fragments.Fragment_Products;
 import com.clickitproduct.R;
 
-public class Services_Search_List extends AppCompatActivity
+public class ProductSearchList extends AppCompatActivity
 {
-    private ViewPager mViewPager;
     private SectionsPagerAdapter mSectionsPagerAdapter;
+    private ViewPager mViewPager;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState)
@@ -36,16 +36,14 @@ public class Services_Search_List extends AppCompatActivity
         public Fragment getItem(int position)
         {
             if (position == 0) {
-                return Fragment_Services.newInstance(position);
+                return Fragment_Products.newInstance(position);
             }
             return null;
         }
-
         @Override
         public int getCount() {
             return 1;
         }
-
         @Override
         public CharSequence getPageTitle(int position)
         {

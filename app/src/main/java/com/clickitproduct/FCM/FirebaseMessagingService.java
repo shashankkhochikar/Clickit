@@ -11,7 +11,7 @@ import android.net.Uri;
 import android.support.v4.app.NotificationCompat;
 
 import com.clickitproduct.R;
-import com.clickitproduct.activities.New_Shop_View_Activity;
+import com.clickitproduct.activities.ShopViewActivityNew;
 import com.google.firebase.messaging.RemoteMessage;
 
 import java.io.InputStream;
@@ -44,13 +44,13 @@ public class FirebaseMessagingService extends com.google.firebase.messaging.Fire
 
         if(flg.equals("1"))
         {
-            intent = new Intent(this, New_Shop_View_Activity.class);
+            intent = new Intent(this, ShopViewActivityNew.class);
             intent.putExtra("Shop_Id", Shop_Id);
             intent.putExtra("focusParticularTab", 4);
         }
         else
         {
-            intent = new Intent(this, New_Shop_View_Activity.class);
+            intent = new Intent(this, ShopViewActivityNew.class);
             intent.putExtra("focusParticularTab", 3);
             intent.putExtra("Shop_Id", Shop_Id);
         }

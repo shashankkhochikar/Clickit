@@ -24,8 +24,8 @@ import android.widget.Toast;
 
 import com.clickitproduct.R;
 import com.clickitproduct.activities.Main_Activity;
-import com.clickitproduct.activities.New_Shop_View_Activity;
-import com.clickitproduct.activities.Products_Search_list;
+import com.clickitproduct.activities.ProductSearchList;
+import com.clickitproduct.activities.ShopViewActivityNew;
 import com.clickitproduct.commonutil.common_variable;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -110,42 +110,42 @@ public class Fragment_Home extends Fragment
        /* laFashion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getContext(), Products_Search_list.class));
+                startActivity(new Intent(getContext(), ProductSearchList.class));
             }
         });
 
         laMobile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getContext(), Products_Search_list.class));
+                startActivity(new Intent(getContext(), ProductSearchList.class));
             }
         });
 
         laHardware.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getContext(), Products_Search_list.class));
+                startActivity(new Intent(getContext(), ProductSearchList.class));
             }
         });
 
         laFurniture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getContext(), Products_Search_list.class));
+                startActivity(new Intent(getContext(), ProductSearchList.class));
             }
         });
 
         laHomeAppliances.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getContext(), Products_Search_list.class));
+                startActivity(new Intent(getContext(), ProductSearchList.class));
             }
         });
 
         laGym.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getContext(), Products_Search_list.class));
+                startActivity(new Intent(getContext(), ProductSearchList.class));
             }
         });*/
 
@@ -154,7 +154,7 @@ public class Fragment_Home extends Fragment
             @Override
             public void onClick(View view)
             {
-                startActivity(new Intent(getContext(), GrabNearestCoupons.class));
+                startActivity(new Intent(getContext(), CouponsGrabNearest.class));
             }
         });*/
 
@@ -163,14 +163,14 @@ public class Fragment_Home extends Fragment
             public void onClick(View view)
             {
                 Main_Activity.str_searched_keyword = ""+tmp1.get("_id").toString().replaceAll("^\"|\"$", "");
-                startActivity(new Intent(getContext(), Products_Search_list.class));
+                startActivity(new Intent(getContext(), ProductSearchList.class));
             }
         });
         txt_furniture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Main_Activity.str_searched_keyword = ""+tmp2.get("_id").toString().replaceAll("^\"|\"$", "");
-                startActivity(new Intent(getContext(), Products_Search_list.class));
+                startActivity(new Intent(getContext(), ProductSearchList.class));
             }
         });
 
@@ -178,14 +178,14 @@ public class Fragment_Home extends Fragment
             @Override
             public void onClick(View view) {
                 Main_Activity.str_searched_keyword = ""+tmp3.get("_id").toString().replaceAll("^\"|\"$", "");
-                startActivity(new Intent(getContext(), Products_Search_list.class));
+                startActivity(new Intent(getContext(), ProductSearchList.class));
             }
         });*/
 
        /* txt_homeApplience.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getContext(), Products_Search_list.class));
+                startActivity(new Intent(getContext(), ProductSearchList.class));
             }
         });*/
 
@@ -199,7 +199,7 @@ public class Fragment_Home extends Fragment
             @Override
             public void onClick(View v) {
                 Main_Activity.str_searched_keyword = ""+cat;
-                startActivity(new Intent(getContext(), Products_Search_list.class));
+                startActivity(new Intent(getContext(), ProductSearchList.class));
             }
         });
     }
@@ -460,7 +460,7 @@ public class Fragment_Home extends Fragment
 
                     common_variable.jShopProductObj = jProductsObj;
 
-                    Intent i = new Intent(getContext(), New_Shop_View_Activity.class);
+                    Intent i = new Intent(getContext(), ShopViewActivityNew.class);
                     i.putExtra("Shop_Id", jobj.get("shop_id").toString().replaceAll("^\"|\"$", ""));
                     i.putExtra("focusParticularTab", 1);
                     startActivity(i);

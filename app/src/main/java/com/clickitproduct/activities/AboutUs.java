@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import com.clickitproduct.R;
 
-public class AboutUsActivity extends AppCompatActivity
+public class AboutUs extends AppCompatActivity
 {
     TextView tv_video;
 
@@ -33,11 +33,11 @@ public class AboutUsActivity extends AppCompatActivity
             }
         });
 
-       /* AlertDialog.Builder alertDialog = new AlertDialog.Builder(AboutUsActivity.this);
+       /* AlertDialog.Builder alertDialog = new AlertDialog.Builder(AboutUs.this);
         alertDialog.setTitle("IP Address");
         alertDialog.setMessage("Enter Address");
 
-        final EditText input = new EditText(AboutUsActivity.this);
+        final EditText input = new EditText(AboutUs.this);
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.MATCH_PARENT);
@@ -52,7 +52,7 @@ public class AboutUsActivity extends AppCompatActivity
                     public void onClick(DialogInterface dialog, int which)
                     {
                         common_variable.main_web_url="http://"+input.getText().toString()+":3000";
-                        Toast.makeText(AboutUsActivity.this,"Ewwww\nNew Ip Has Been Set ",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AboutUs.this,"Ewwww\nNew Ip Has Been Set ",Toast.LENGTH_SHORT).show();
                     }
                 });
 

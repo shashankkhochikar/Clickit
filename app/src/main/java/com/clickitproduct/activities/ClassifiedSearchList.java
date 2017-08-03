@@ -7,13 +7,14 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import com.clickitproduct.Fragments.Fragment_Products;
+
+import com.clickitproduct.Fragments.Fragment_Classifieds;
 import com.clickitproduct.R;
 
-public class Products_Search_list extends AppCompatActivity
+public class ClassifiedSearchList extends AppCompatActivity
 {
-    private SectionsPagerAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
+    private SectionsPagerAdapter mSectionsPagerAdapter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState)
@@ -24,6 +25,7 @@ public class Products_Search_list extends AppCompatActivity
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
+
     }
 
     public class SectionsPagerAdapter extends FragmentPagerAdapter
@@ -35,14 +37,16 @@ public class Products_Search_list extends AppCompatActivity
         public Fragment getItem(int position)
         {
             if (position == 0) {
-                return Fragment_Products.newInstance(position);
+                return Fragment_Classifieds.newInstance(position);
             }
             return null;
         }
+
         @Override
         public int getCount() {
             return 1;
         }
+
         @Override
         public CharSequence getPageTitle(int position)
         {
