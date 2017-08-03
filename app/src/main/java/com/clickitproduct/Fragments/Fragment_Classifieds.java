@@ -28,14 +28,16 @@ import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.clickitproduct.R;
 import com.clickitproduct.activities.Main_Activity;
-import com.clickitproduct.activities.common_variable;
+import com.clickitproduct.commonutil.common_variable;
 import com.github.clans.fab.FloatingActionButton;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.koushikdutta.async.future.FutureCallback;
 import com.koushikdutta.ion.Ion;
+
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.HashMap;

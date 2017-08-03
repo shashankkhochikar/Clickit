@@ -19,14 +19,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.StrictMode;
 import android.provider.Settings;
-
-import com.clickitproduct.Classifieds.AddClassified;
-import com.clickitproduct.Coupens.GrabNearestCoupons;
-import com.clickitproduct.Fragments.Fragment_Classifieds;
-import com.clickitproduct.Fragments.Fragment_Services;
-import com.clickitproduct.Services.ServicesForm;
-import com.clickitproduct.User_Profile.Profile_new;
-import com.github.clans.fab.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.ActivityCompat;
@@ -54,12 +46,15 @@ import android.widget.LinearLayout;
 import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.clickitproduct.Fragments.Fragment_Classifieds;
 import com.clickitproduct.Fragments.Fragment_Home;
 import com.clickitproduct.Fragments.Fragment_Offers;
-import com.clickitproduct.LoginRegistration.UserLogin;
+import com.clickitproduct.Fragments.Fragment_Services;
 import com.clickitproduct.R;
 import com.clickitproduct.SQLite.DataBaseConnection;
-import com.clickitproduct.ShopRegistration.ShopRegisterForm;
+import com.clickitproduct.commonutil.common_variable;
+import com.github.clans.fab.FloatingActionButton;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -691,7 +686,7 @@ public class Main_Activity extends AppCompatActivity implements NavigationView.O
         }else if (id == R.id.tContact){
             startActivity(new Intent(this, Contact_us.class));
         }else if (id == R.id.tAbout) {
-            startActivity(new Intent(this, aboutUs.class));
+            startActivity(new Intent(this, AboutUsActivity.class));
         }else if(id == R.id.tRegService){
             startActivity(new Intent(Main_Activity.this, ServicesForm.class));
         }else if(id == R.id.tRegClassified){

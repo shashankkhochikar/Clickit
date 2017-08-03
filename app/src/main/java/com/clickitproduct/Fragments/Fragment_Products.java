@@ -27,15 +27,17 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
+
 import com.clickitproduct.R;
 import com.clickitproduct.activities.Main_Activity;
 import com.clickitproduct.activities.New_Shop_View_Activity;
-import com.clickitproduct.activities.common_variable;
+import com.clickitproduct.commonutil.common_variable;
 import com.github.clans.fab.FloatingActionButton;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.koushikdutta.async.future.FutureCallback;
 import com.koushikdutta.ion.Ion;
+
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;

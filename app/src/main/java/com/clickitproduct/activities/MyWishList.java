@@ -1,11 +1,8 @@
 package com.clickitproduct.activities;
 
 import android.app.ProgressDialog;
-import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
-import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -21,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.clickitproduct.R;
+import com.clickitproduct.commonutil.common_variable;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.koushikdutta.async.future.FutureCallback;

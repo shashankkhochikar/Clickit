@@ -72,13 +72,13 @@
             android:theme="@android:style/Theme.Translucent" />
 
         <activity
-            android:name=".LoginRegistration.UserLogin"
+            android:name=".activities.UserLogin"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".LoginRegistration.UserRegister"
+            android:name=".activities.UserRegister"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".ShopRegistration.ShopRegisterForm"
+            android:name=".activities.ShopRegisterForm"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden" />
         <activity
@@ -98,33 +98,32 @@
         <activity android:name=".activities.Classifieds_Search_List" />
         <activity android:name=".activities.ViewCart" />
         <activity android:name=".activities.Privacy_policy" />
-        <activity android:name=".activities.aboutUs" />
+        <activity android:name=".activities.AboutUsActivity" />
         <activity android:name=".activities.Contact_us" />
         <activity android:name=".activities.Notifications" />
         <activity android:name=".activities.ShopGallery" />
         <activity android:name=".activities.MyWishList" />
         <activity android:name=".activities.New_Shop_View_Activity" />
 
-        <activity android:name=".Products.AddProducts" />
-        <activity android:name=".Products.ProductHistory" />
+        <activity android:name=".activities.AddProducts" />
+        <activity android:name=".activities.ProductHistory" />
 
-        <activity android:name=".Offer.OfferHistory" />
-        <activity android:name=".Offer.Add_Offers" />
+        <activity android:name=".activities.OfferHistory" />
+        <activity android:name=".activities.Add_Offers" />
 
-        <activity android:name=".Coupens.AddCoupons" />
-        <activity android:name=".Coupens.GrabNearestCoupons" />
+        <activity android:name=".activities.AddCoupons" />
+        <activity android:name=".activities.GrabNearestCoupons" />
 
-        <activity android:name=".Classifieds.AddClassified" />
+        <activity android:name=".activities.AddClassified" />
 
         <activity
-            android:name=".Services.ServicesForm"
+            android:name=".activities.ServicesForm"
             android:windowSoftInputMode="stateHidden" />
 
-        <activity android:name=".User_Profile.Profile_new" />
-        <activity android:name=".User_Profile.UserServices" />
-        <activity android:name=".User_Profile.UserClassifieds" />
-        <activity android:name=".User_Profile.UserCouponsHistory" />
-        <activity android:name=".User_Profile.Prof_new" />
+        <activity android:name=".activities.Profile_new" />
+        <activity android:name=".activities.UserServices" />
+        <activity android:name=".activities.UserClassifieds" />
+        <activity android:name=".activities.UserCouponsHistory" />
 
         <receiver
             android:name=".listener.SmsListener"

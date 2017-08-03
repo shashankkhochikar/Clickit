@@ -20,9 +20,10 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.clickitproduct.R;
 import com.clickitproduct.activities.Main_Activity;
-import com.clickitproduct.activities.common_variable;
+import com.clickitproduct.commonutil.common_variable;
 import com.github.clans.fab.FloatingActionButton;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;

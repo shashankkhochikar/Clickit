@@ -5,7 +5,7 @@
     android:id="@+id/shop_register_form"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.clickitproduct.ShopRegistration.ShopRegisterForm">
+    tools:context="com.clickitproduct.activities.ShopRegisterForm">
 
     <LinearLayout
         android:layout_width="match_parent"

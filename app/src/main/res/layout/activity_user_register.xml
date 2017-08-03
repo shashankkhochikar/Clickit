@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context="com.clickitproduct.LoginRegistration.UserRegister">
+    tools:context="com.clickitproduct.activities.UserRegister">
 
     <LinearLayout
         android:layout_width="match_parent"

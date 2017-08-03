@@ -1,7 +1,7 @@
 package com.clickitproduct.activities;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -11,8 +11,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.clickitproduct.Beans.Cart;
 import com.clickitproduct.R;
-import com.clickitproduct.Beans.*;
+import com.clickitproduct.commonutil.common_variable;
 import com.koushikdutta.ion.Ion;
 
 import java.util.ArrayList;

@@ -3,7 +3,6 @@ package com.clickitproduct.Fragments;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v4.app.Fragment;
@@ -16,17 +15,16 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.clickitproduct.R;
 import com.clickitproduct.activities.Main_Activity;
 import com.clickitproduct.activities.New_Shop_View_Activity;
-import com.clickitproduct.R;
-import com.clickitproduct.activities.common_variable;
+import com.clickitproduct.commonutil.common_variable;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.koushikdutta.async.future.FutureCallback;
@@ -40,7 +38,7 @@ import java.text.NumberFormat;
 import java.util.Locale;
 
 import static android.content.Context.MODE_PRIVATE;
-import static com.clickitproduct.activities.common_variable.sharedpreferences;
+import static com.clickitproduct.commonutil.common_variable.sharedpreferences;
 
 public class Fragment_Shops_Products extends Fragment
 {

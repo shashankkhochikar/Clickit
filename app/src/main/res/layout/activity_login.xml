@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_login2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/login_backg_light"
     android:orientation="vertical"
-    tools:context="com.clickitproduct.LoginRegistration.UserLogin">
+    tools:context="com.clickitproduct.activities.UserLogin">
 
     <LinearLayout
         android:layout_width="match_parent"

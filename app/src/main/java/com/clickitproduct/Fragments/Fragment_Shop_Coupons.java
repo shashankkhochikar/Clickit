@@ -16,7 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.clickitproduct.R;
-import com.clickitproduct.activities.common_variable;
+import com.clickitproduct.commonutil.common_variable;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.koushikdutta.async.future.FutureCallback;
@@ -26,7 +26,7 @@ import java.text.NumberFormat;
 import java.util.Locale;
 
 import static android.content.Context.MODE_PRIVATE;
-import static com.clickitproduct.activities.common_variable.sharedpreferences;
+import static com.clickitproduct.commonutil.common_variable.sharedpreferences;
 
 public class Fragment_Shop_Coupons extends Fragment {
     View rootview = null;

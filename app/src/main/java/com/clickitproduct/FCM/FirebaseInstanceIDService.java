@@ -3,7 +3,7 @@ package com.clickitproduct.FCM;
 import android.util.Log;
 
 import com.clickitproduct.SQLite.DataBaseConnection;
-import com.clickitproduct.activities.common_variable;
+import com.clickitproduct.commonutil.common_variable;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.FirebaseInstanceIdService;
 import com.google.gson.JsonObject;

@@ -10,27 +10,21 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.clickitproduct.Fragments.Fragment_Shop_Coupons;
 import com.clickitproduct.Fragments.Fragment_Shops_Offers;
 import com.clickitproduct.Fragments.Fragment_Shops_Products;
 import com.clickitproduct.R;
-import com.google.gson.JsonArray;
+import com.clickitproduct.commonutil.common_variable;
 import com.google.gson.JsonObject;
 import com.koushikdutta.async.future.FutureCallback;
 import com.koushikdutta.ion.Ion;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 public class New_Shop_View_Activity extends AppCompatActivity
 {

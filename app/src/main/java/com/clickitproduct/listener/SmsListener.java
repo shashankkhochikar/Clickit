@@ -5,9 +5,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.telephony.SmsMessage;
-import com.clickitproduct.LoginRegistration.UserLogin;
-import com.clickitproduct.User_Profile.Profile_new;
-import com.clickitproduct.activities.common_variable;
+
+import com.clickitproduct.activities.Profile_new;
+import com.clickitproduct.activities.UserLogin;
+import com.clickitproduct.commonutil.common_variable;
 
 public class SmsListener extends BroadcastReceiver
 {
