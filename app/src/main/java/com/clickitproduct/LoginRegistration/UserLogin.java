@@ -30,7 +30,6 @@ import com.clickitproduct.R;
 import com.clickitproduct.SQLite.DataBaseConnection;
 import com.clickitproduct.activities.Main_Activity;
 import com.clickitproduct.activities.common_variable;
-import com.clickitproduct.listener.SmsListener;
 import com.google.gson.JsonObject;
 import com.koushikdutta.async.future.FutureCallback;
 import com.koushikdutta.ion.Ion;
@@ -147,10 +146,10 @@ public class UserLogin extends AppCompatActivity
 
                 final EditText etMob = (EditText) prompt.findViewById(R.id.etMob);
                 Button btnGetPass = (Button) prompt.findViewById(R.id.btnGetPass);
-
                 etMob.setText(etUserName.getText().toString());
 
-                btnGetPass.setOnClickListener(new View.OnClickListener() {
+                btnGetPass.setOnClickListener(new View.OnClickListener()
+                {
                     @Override
                     public void onClick(View view)
                     {
@@ -324,7 +323,8 @@ public class UserLogin extends AppCompatActivity
         }
         else
         {
-            if(isNetworkConnected()) {
+            if(isNetworkConnected())
+            {
                 final ProgressDialog dialog = new ProgressDialog(UserLogin.this);
                 dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
                 dialog.setMessage("Loading...");
